@@ -54,6 +54,11 @@
     var AC = Math.sqrt(Math.pow(C.x-A.x,2)+ Math.pow(C.y-A.y,2));
     return Math.acos((BC*BC+AB*AB-AC*AC)/(2*BC*AB));
 }
+    function radians_to_degrees(radians)
+{
+  var pi = Math.PI;
+  return radians * (180/pi);
+}
 
     // const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
     // const grid = new LandmarkGrid(landmarkContainer);
@@ -104,8 +109,8 @@
      ]
 
      // console.log(leftArmData)
-     let angle = find_angle(leftArmData[0],leftArmData[1],leftArmData[2]);
-     console.log(angle)
+     let angle = radians_to_degrees(find_angle(leftArmData[0],leftArmData[1],leftArmData[2]));
+     console.log(angle);
 
 
 
